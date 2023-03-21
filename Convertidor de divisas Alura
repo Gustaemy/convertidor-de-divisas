@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Divisas</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        form {
+            margin: 50px auto;
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        input[type="submit"] {
+            background-color: #008CBA;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #006699;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="conversor.java" method="post">
+        <h1>Conversor de Divisas</h1>
+        <label for="cantidad">Cantidad de Pesos Mexicanos:</label>
+        <input type="number" name="cantidad" id="cantidad" required>
+        <label for="moneda_destino">Moneda de Destino:</label>
+        <select name="moneda_destino" id="moneda_destino" required>
+            <option value="">Seleccione una Moneda</option>
+            <option value="USD">Dólar Estadounidense</option>
+            <option value="EUR">Euro</option>
+            <option value="GBP">Libra Esterlina</option>
+            <option value="JPY">Yen Japonés</option>
+            <option value="KRW">Won surcoreano</option>
+        </select>
+        <input type="submit" value="Convertir">
+    </form>
+</body>
+</html>
+
